@@ -20,48 +20,25 @@ body::before {
 
 #content {
   list-style-type: none;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
+  padding: 0;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
-  -webkit-justify-content: space-around;
-      -ms-flex-pack: distribute;
-          justify-content: space-around;
-  -webkit-align-content: center;
-      -ms-flex-line-pack: center;
-          align-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: center;
 }
 
 #content li {
   position: relative;
   width: 210px;
   height: 300px;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-      -ms-flex-positive: 0;
-          flex-grow: 0;
-  -webkit-flex-shrink: 0;
-      -ms-flex-negative: 0;
-          flex-shrink: 0;
+  flex-grow: 0;
+  flex-shrink: 0;
   margin: 1%;
   padding: 20px;
   overflow: hidden;
-  -webkit-transition: 0.4s;
   transition: 0.4s;
   z-index: 100;
-  background: #663399
-              -webkit-linear-gradient(left,
-              transparent 3%,
-              rgba(0,0,0,0.1) 5%,
-              transparent 6%);
   background: #663399
               linear-gradient(90deg,
               transparent 3%,
@@ -71,11 +48,6 @@ body::before {
 
 #content li:nth-child(2n) {
   background: #03a9f4
-              -webkit-linear-gradient(left,
-              transparent 3%,
-              rgba(0,0,0,0.1) 5%,
-              transparent 6%);
-  background: #03a9f4
               linear-gradient(90deg,
               transparent 3%,
               rgba(0,0,0,0.1) 5%,
@@ -83,11 +55,6 @@ body::before {
 }
 
 #content li:nth-child(3n) {
-  background: #4caf50
-              -webkit-linear-gradient(left,
-              transparent 3%,
-              rgba(0,0,0,0.1) 5%,
-              transparent 6%);
   background: #4caf50
               linear-gradient(90deg,
               transparent 3%,
@@ -98,8 +65,16 @@ body::before {
 #content li:hover {
   cursor: pointer;
   box-shadow: 1px 5px 10px 0 #666;
-  -webkit-transition: 0.4s;
   transition: 0.4s;
+}
+
+#content img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
 }
 
 h3 {
@@ -116,14 +91,12 @@ h3 + p {
   position: absolute;
   top: 50vh;
   right: 50vw;
-  -webkit-transform: translate(50%, -50%);
-      -ms-transform: translate(50%, -50%);
-          transform: translate(50%, -50%);
+  transform: translate(50%, -50%);
   min-width: 450px;
   z-index: 999;
   background-color: #f2f2f2;
   padding: 25px;
-  box-shadow: 0 0 100vw 100vh rgba(0, 0, 0, 0.8);
+  box-shadow: 0 0 100vh 100vw rgba(0, 0, 0, 0.8);
 }
 
 #close {
